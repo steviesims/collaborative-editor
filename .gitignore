@@ -8,15 +8,15 @@
 /frontend/dist
 
 # Backend
-/collabtree-backend/.venv
-/collabtree-backend/venv
-/collabtree-backend/.env
-/collabtree-backend/__pycache__
-/collabtree-backend/**/__pycache__
-/collabtree-backend/*.pyc
+/backend/.venv
+/backend/venv
+/backend/.env
+/backend/__pycache__
+/backend/**/__pycache__
+/backend/*.pyc
 
-/HocusPocusWebSocket-Service/node_modules
-/HocusPocusWebSocket-Service/db.sqlite
+/hocuspocus-service/node_modules
+/hocuspocus-service/db.sqlite
 
 # IDE/Editor files
 .vscode/
