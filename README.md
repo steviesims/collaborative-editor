@@ -1,6 +1,6 @@
-# CollabTree: Real-time Document Collaboration
+# Collaborative: Real-time Document Collaboration
 
-CollabTree is a full-stack application that allows teams to create, edit, and manage documents in real time. Users can invite teammates, scrape website content, and collaboratively edit documents using a rich text editor powered by Tiptap.
+Collaborative is a full-stack application that allows teams to create, edit, and manage documents in real time. Users can invite teammates, scrape website content, and collaboratively edit documents using a rich text editor powered by Tiptap.
 
 ## Table of Contents
 1. Features
@@ -41,14 +41,14 @@ CollabTree is a full-stack application that allows teams to create, edit, and ma
 ## Folder Structure
 ```
 .
-├── HocusPocusWebSocket-Service/   # Service handling real-time collaboration via WebSockets
-├── collabtree-backend/           # FastAPI backend for authentication, scraping, and document APIs
+├── hocuspocus-service/   # Service handling real-time collaboration via WebSockets
+├── backend/           # FastAPI backend for authentication, scraping, and document APIs
 ├── frontend/                     # Next.js (React) application with Tiptap editor
 └── .gitignore
 ```
 
-1. **HocusPocusWebSocket-Service**: Contains WebSocket server code (using HocusPocus or a custom Socket.IO-like approach). Handles real-time content updates and broadcasts to connected clients.
-2. **collabtree-backend**: FastAPI application. Manages user authentication (JWT), team invites, scraping endpoints, data persistence, etc.
+1. **hocuspocus-servoce**: Contains WebSocket server code (using HocusPocus or a custom Socket.IO-like approach). Handles real-time content updates and broadcasts to connected clients.
+2. **backend**: FastAPI application. Manages user authentication (JWT), team invites, scraping endpoints, data persistence, etc.
 3. **frontend**: Next.js pages for signup, login, workspace listing, and Tiptap editor views. Manages user interactions, file tree rendering, invites, and real-time updates via WebSockets.
 
 ## Getting Started
@@ -63,11 +63,11 @@ CollabTree is a full-stack application that allows teams to create, edit, and ma
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/nandishns/CollabTree
-cd collabtree
+cd collaborative-editor
 ```
 2. **Install Backend Dependencies**
 ```bash
-cd collabtree-backend
+cd backend
 pip install -r requirements.txt
 # or if you use Poetry
 poetry install
@@ -81,7 +81,7 @@ yarn
 ```
 4. **Install WebSocket Service Dependencies**
 ```bash
-cd ../HocusPocusWebSocket-Service
+cd ../hocuspocus-service
 npm install
 # or yarn
 ```
@@ -93,13 +93,13 @@ Make sure to configure your environment variables (for JWT secrets, DB connectio
 **Option A: Manual (Local) Run**
 1. **Run the Backend (FastAPI)**
 ```bash
-cd collabtree-backend
+cd backend
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
    - Your backend API will be available at http://localhost:8000.
 2. **Run the WebSocket Service**
 ```bash
-cd HocusPocusWebSocket-Service
+cd hocuspocus-service
 npm run start
 ```
    - Typically runs on ws://0.0.0.0:80 or whichever port you configured.
@@ -136,7 +136,3 @@ docker-compose up --build
 - Multiple team members can open the same document simultaneously.
 - Edits appear in near real time thanks to the WebSocket connection.
 - The content auto-saves periodically, ensuring no changes are lost.
-
-
-
-Thank you.
