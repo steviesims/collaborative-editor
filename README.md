@@ -137,9 +137,6 @@ docker-compose up --build
 - Edits appear in near real time thanks to the WebSocket connection.
 - The content auto-saves periodically, ensuring no changes are lost.
 
-## API Endpoints
-- [API Documentation](https://collabtree-production.up.railway.app/docs)
 
----
 
 Thank you.
